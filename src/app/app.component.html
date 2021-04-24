@@ -1,3 +1,44 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-header>
+      <ion-toolbar>
+
+        <ion-buttons slot="primary">
+          <ion-button routerLink="./new-note" >
+            <ion-icon name="add" slot="icon-only">
+
+            </ion-icon>
+          </ion-button>
+          </ion-buttons>
+
+        <ion-title>
+          <ion-toolbar>Groupe-9</ion-toolbar>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="stats">
+            <ion-label>Statistic</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="secondary">
+      <ion-tab-button tab="category">
+        <ion-icon name="storefront"></ion-icon>
+        Category
+      </ion-tab-button>
+      <ion-tab-button tab="note">
+        <ion-icon name="book-outline"> </ion-icon>
+        Notes
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
 </ion-app>
